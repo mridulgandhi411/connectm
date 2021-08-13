@@ -1,0 +1,446 @@
+<%- include('header') %>
+
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('sidenavHome') %>
+        <div class="d-flex flex-column" id="content-wrapper"><div id="content">
+
+            <%- include('navHome') %>
+
+<div class="container-fluid">
+    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+        <h3 class="text-dark mb-0">General</h3><a class="btn btn-primary btn-sm d-sm-inline-block filterPosition" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i> Filter</a></div>
+    <div class="row changingRowSize">
+        <div class="col-md-12 col-xl-12 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters postBar">
+                        <div class="col mr-2">
+                            <form class="mr-auto navbar-search w-100 listing-header" id="001" onclick="togglediv(this)">
+                            <div id="input-group2" style="display:none;">
+                               <h4 class="mb-4"><img src="/img/B.jpg"  class="writtenLogo"  alt=""></h4>
+                               <div style="display:inline; position:absolute; right:0;top:0; font-size:0.8rem;" class="input-group-append"><button class="btn btn-primary publishPost" type="button">Publish</button></div>
+                            </div>
+                            <div id="input-group" class="input-group">
+                              <div class="writePost">
+                                <i class="fas fa-edit"></i> <h6 style="display:inline;">Write a post on WeCBR Connect</h6>
+                              </div>
+                            </div>
+                            <img id="arrow001" style="display:none;" src="https://image.flaticon.com/icons/svg/25/25224.svg" class="arrow" />
+                           </form>
+                        <div id="body001" class="listing">
+                            <form  class="removeShadow">
+                                <p class="listing-item" style="text-align:left;">Post Title:</p>
+                                <input type="text" class="listing-item postField" style="text-align:left;" placeholder="Title">
+                                <p class="listing-item" style="text-align:left;">Summary in 100 words:</p>
+                                <input type="text" class="listing-item postField" style="text-align:left;" placeholder="This text will be displayed on home screen">
+                                <p class="listing-item" style="text-align:left;">Upload Image:</p>
+                                <input type="file" class="btn btn-primary listing-item postField" style="text-align:left;" placeholder="Title">
+                                <p class="listing-item" style="text-align:left;">Post Content:</p>
+                                <textarea class="listing-item postField" name="name" rows="20" cols="80" style="text-align:left;" placeholder="Detailed description of your event.."></textarea>
+                                <div class="listing-item dropdown show">
+                                  <a class="btn btn-secondary dropdown-toggle listing-item categorySelect" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Select Category
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Music <i class="fas fa-guitar"></i> </a>
+                                        <a class="dropdown-item" href="#">Education <i class="fas fa-user-graduate"></i> </a>
+                                        <a class="dropdown-item" href="#"><p  style="color:green; display:inline;">Entertainment</p> <i class="fas fa-glass-cheers"></i>  </a>
+                                        <a class="dropdown-item" href="#">Science and Technology <i class="fas fa-flask"></i>  </a>
+                                        <a class="dropdown-item" href="#">Film and Animation <i class="fas fa-video"></i>  </a>
+                                        <a class="dropdown-item" href="#">Gaming <i class="fas fa-gamepad"></i>  </a>
+                                        <a class="dropdown-item" href="#">News and Politics <i class="fas fa-newspaper"></i>  </a>
+                                        <a class="dropdown-item" href="#">Non-profits and Activism <i class="fas fa-hand-holding-heart"></i>  </a>
+                                        <a class="dropdown-item" href="#">How to and Style <i class="fas fa-question-circle"></i>  </a>
+                                        <a class="dropdown-item" href="#">People and Blogs <i class="fas fa-blog"></i>  </a>
+                                        <a class="dropdown-item" href="#">Pets and Animals <i class="fas fa-dog"></i>  </a>
+                                        <a class="dropdown-item" href="#">Sports <i class="fas fa-football-ball"></i> </a>
+                                        <a class="dropdown-item" href="#">Travel and Events <i class="fas fa-calendar-alt"></i>  </a>
+                                      </div>
+                                </div>
+
+                                <a type="button" class="listing-item showAdvanceOptions" onclick="Show_Div(Div_1)">Show advance options</a>
+                                <div id="Div_1" class="ascunde">
+                                  <div class="custom-control listing-item custom-checkbox small requestToggle">
+                                      <div class="form-check rememberButton"><input type="checkbox" id="switch" onchange="ConfirmForm();" class="toggleSwitch" /><label class="toggleSwitch" for="switch">Toggle</label></div>
+                                      <p style="position:absolute; left:38px; top:1.25px;">Request Verification</p>
+                                  </div>
+                                 </div>
+                                 <div id="BlockUIConfirm" class="BlockUIConfirm">
+                                 	<div class="blockui-mask"></div>
+                                 	<div class="RowDialogBody">
+                                 		<div class="confirm-header row-dialog-hdr-success">
+                                 			Confirm Acceptance
+                                 		</div>
+                                 		<div class="confirm-body">
+                                 		Are you sure you want to request verification?
+                                 		</div>
+                                 		<div class="confirm-btn-panel pull-right">
+                                 			<div class="btn-holder pull-right">
+                                 				<input type="submit" class="row-dialog-btn btn btn-success" value="Yes, Accept" onclick="Submit();" />
+                                 				<input type="button" class="row-dialog-btn btn btn-naked" value="No, Cancel" onclick="$('#BlockUIConfirm').hide();" />
+                                 			</div>
+                                 		</div>
+                                 	</div>
+                                 </div>
+                            </form>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 col-xl-12 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters postBar">
+                        <div class="col mr-2 post">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span style="font-size:1.05rem;">Sunburn Festival 2020</span></div>
+                            <div class="text-dark font-weight-bold h6 mb-0"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> <a href="post.html" class="readMore">See All Details</a></div>
+                            <div class="text-dark font-weight-bold h6 mb-0">  <span style="color:#4E73DF">Date: 20th May 2021</span> </div>
+                            <div class="text-dark font-weight-bold h6 mb-0">  <span style="color:#4E73DF">Time: 4-7pm</span> </div>
+                           <div class="likeFeature">
+
+                           </div>
+                            <div id = "div1" style="display:block" onclick = "replace('div1','div2')"><a href="#" class="like"><i class="far fa-envelope"></i></a></div>
+                            <div id = "div2" style="display:none" onclick = "replace('div2','div1')"><a href="#" class="like"><i class="far fa-envelope-open"></i></a></div>
+                        </div>
+
+                        <div class="col-auto iconSize" style="position:absolute;top:11px;right:5px;margin:0;padding:5px 5px;"><i class="fas fa-guitar"></i></div>
+                        <img src="https://pbs.twimg.com/media/EHkkfI_XYAAQafY.jpg"  height=100 width=100 class="rounded homeImage" alt="my image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-12 mb-4">
+            <div class="card shadow border-left-success py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span></div>
+                        </div>
+                        <div class="col-auto " style="position:absolute;top:11px;right:5px;margin:0;padding:5px 3px;"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-12 mb-4">
+            <div class="card shadow border-left-info py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Tasks</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span></div>
+                        </div>
+                        <div class="col-auto" style="position:absolute;top:11px;right:5px;margin:0;padding:5px 3px;"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-12 mb-4">
+            <div class="card shadow border-left-warning py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>Pending Requests</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span></div>
+                        </div>
+                        <div class="col-auto" style="position:absolute;top:11px;right:5px;margin:0;padding:5px 3px;"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7 col-xl-8">
+            <div class="card shadow mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="text-primary font-weight-bold m-0">Earnings Overview</h6>
+                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                            role="menu">
+                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#"> Action</a><a class="dropdown-item" role="presentation" href="#"> Another action</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"> Something else here</a></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area"><canvas height="400" width="455" style="display: block; height: 320px; width: 364px;"></canvas></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xl-4">
+            <div class="card shadow mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="text-primary font-weight-bold m-0">Revenue Sources</h6>
+                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                            role="menu">
+                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#"> Action</a><a class="dropdown-item" role="presentation" href="#"> Another action</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"> Something else here</a></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area"><canvas height="400" width="302" style="display: block; height: 320px; width: 242px;"></canvas></div>
+                    <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i> Direct</span><span class="mr-2"><i class="fas fa-circle text-success"></i> Social</span><span class="mr-2"><i class="fas fa-circle text-info"></i> Refferal</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="text-primary font-weight-bold m-0">Projects</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small font-weight-bold">Server migration<span class="float-right">20%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">20%</span></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Sales tracking<span class="float-right">40%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Customer Database<span class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60%</span></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Payout Details<span class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Account setup<span class="float-right">Complete!</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="text-primary font-weight-bold m-0">Todo List</h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col mr-2">
+                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">10:30 AM</span></div>
+                            <div class="col-auto">
+                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1" /><label class="custom-control-label" for="formCheck-1"></label></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col mr-2">
+                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">11:30 AM</span></div>
+                            <div class="col-auto">
+                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-2" /><label class="custom-control-label" for="formCheck-2"></label></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col mr-2">
+                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">12:30 AM</span></div>
+                            <div class="col-auto">
+                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-3" /><label class="custom-control-label" for="formCheck-3"></label></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-primary shadow">
+                        <div class="card-body">
+                            <p class="m-0">Primary</p>
+                            <p class="text-white-50 small m-0">#4e73df</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-success shadow">
+                        <div class="card-body">
+                            <p class="m-0">Success</p>
+                            <p class="text-white-50 small m-0">#1cc88a</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-info shadow">
+                        <div class="card-body">
+                            <p class="m-0">Info</p>
+                            <p class="text-white-50 small m-0">#36b9cc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-warning shadow">
+                        <div class="card-body">
+                            <p class="m-0">Warning</p>
+                            <p class="text-white-50 small m-0">#f6c23e</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-danger shadow">
+                        <div class="card-body">
+                            <p class="m-0">Danger</p>
+                            <p class="text-white-50 small m-0">#e74a3b</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card text-white bg-secondary shadow">
+                        <div class="card-body">
+                            <p class="m-0">Secondary</p>
+                            <p class="text-white-50 small m-0">#858796</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+
+    function togglediv(mydiv){
+        const arrowdiv = document.getElementById('arrow'+mydiv.id);
+        const bodydiv = document.getElementById('body'+mydiv.id);
+
+        bodydiv.querySelectorAll('.listing-item')
+      .forEach(listingItem => listingItem.classList.toggle('listing-item-active'));
+        console.log(arrowdiv.style.transform);
+        if(arrowdiv.style.transform == ''){
+            arrowdiv.style.transform = "rotate(180deg)";
+            $("#input-group").hide();
+            $("#input-group2").show();
+        }else{
+            arrowdiv.style.transform = '';
+              $("#input-group").show();
+              $("#input-group2").hide();
+        }
+    }
+    //Based on a pen by @nicksheffield
+    var anchors = document.querySelectorAll('a.like');
+
+    Array.prototype.forEach.call(anchors, function(anchor) {
+        anchor.addEventListener('click', explode);
+    });
+
+    function explode(e) {
+        [].map.call(anchors, function(el) {
+               el.classList.toggle('active');
+         });
+        var x = e.clientX;
+        var y = e.clientY;
+        var c = document.createElement('canvas');
+        var ctx = c.getContext('2d');
+        var ratio = window.devicePixelRatio;
+        var particles = [];
+
+        document.body.appendChild(c);
+
+        c.style.position = 'absolute';
+        c.style.left = (x - 50) + 'px';
+        c.style.top = (y - 50) + 'px';
+        c.style.pointerEvents = 'none';
+        c.style.width = 100 + 'px';
+        c.style.height = 100 + 'px';
+        c.width = 100 * ratio;
+        c.height = 100 * ratio;
+
+        function Particle() {
+            return {
+                x: c.width / 2,
+                y: c.height / 2,
+                radius: 10,
+                color: 'rgb(' + [r(100,255), r(100,255), r(100,255)].join(',') + ')',
+                rotation: r(0,360, true),
+                speed:4,
+                friction: 0.9,
+                opacity: r(0,0.5, true),
+                yVel: 0,
+                gravity: 0
+            };
+        }
+
+        for(var i=0; ++i<15;) {
+            particles.push(Particle());
+        }
+
+
+
+        function render() {
+            ctx.clearRect(0, 0, c.width, c.height);
+
+            particles.forEach(function(p, i) {
+
+                angleTools.moveOnAngle(p, p.speed);
+
+                p.opacity -= 0.01;
+                p.speed *= p.friction;
+                p.radius *= p.friction;
+
+                p.yVel += p.gravity;
+                p.y += p.yVel;
+
+                if(p.opacity < 0) return;
+                if(p.radius < 0) return;
+
+                ctx.beginPath();
+                ctx.globalAlpha = p.opacity;
+                ctx.fillStyle = p.color;
+                ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, false);
+                ctx.fill();
+            });
+        }
+
+        (function renderLoop(){
+            requestAnimationFrame(renderLoop);
+            render();
+        })();
+
+        setTimeout(function() {
+            document.body.removeChild(c);
+        }, 3000);
+    }
+
+    var angleTools={getAngle:function(t,n){var a=n.x-t.x,e=n.y-t.y;return Math.atan2(e,a)/Math.PI*180},getDistance:function(t,n){var a=t.x-n.x,e=t.y-n.y;return Math.sqrt(a*a+e*e)},moveOnAngle:function(t,n){var a=this.getOneFrameDistance(t,n);t.x+=a.x,t.y+=a.y},getOneFrameDistance:function(t,n){return{x:n*Math.cos(t.rotation*Math.PI/180),y:n*Math.sin(t.rotation*Math.PI/180)}}};
+    function r(a,b,c){ return parseFloat((Math.random()*((a?a:1)-(b?b:0))+(b?b:0)).toFixed(c?c:0)); }
+    function replace( hide, show ) {
+      document.getElementById(hide).style.display="none";
+      document.getElementById(show).style.display="block";
+    }
+
+    function Show_Div(Div_id) {
+      if (false == $(Div_id).is(':visible')) {
+        $(Div_id).show(250);
+      }
+      else {
+        $(Div_id).hide(250);
+      }
+    }
+
+
+      $("#BlockUIConfirm").hide();
+
+      function ConfirmForm() {
+      	$("#BlockUIConfirm").show();
+      }
+
+      function Submit() {
+      	alert("Form would be submitted.");
+      	$('#BlockUIConfirm').hide();
+      }
+
+
+
+</script>
+<%- include('footer') %>

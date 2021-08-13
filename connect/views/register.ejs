@@ -1,0 +1,46 @@
+<%- include('header'); -%>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-flex mainBox">
+                        <img class="flex-grow-1 letterBoxGIF" src="/img/c.png" class="inviteGIF" alt="">
+                    </div>
+                    <div class="col-lg-6 mainBox">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="mb-4"><img src="/img/B.jpg"  height="40%" width="75%" alt=""></h4>
+                                <img src="https://media.giphy.com/media/h53Fn7Z9faTLI2Lxsc/giphy.gif" width="20%" alt="">
+                                <h6 class="text-dark mb-4">Create an Account!</h6>
+                            </div>
+                            <form class="user" action="/register" method="POST">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="First Name" name="first_name"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Last Name" name="last_name"></div>
+                                </div>
+                                <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="username"></div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat"></div>
+                                  </div><button class="btn btn-primary text-white" type="submit">Register Account</button>
+                                <hr><a class="btn btn-primary text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a><a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook</a>
+                                <hr>
+                            </form>
+                            <div class="text-center"><a class="small" href="/forgot-password">Forgot Password?</a></div>
+                            <div class="text-center"><a class="small" href="/login">Already have an account? Login!</a></div>
+                        </div>
+                          <span class="WeCBR">From WeCBR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
